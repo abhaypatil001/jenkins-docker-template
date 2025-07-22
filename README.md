@@ -111,6 +111,7 @@ Docker and Git are installed in the image so Jenkins jobs can run containerized 
 
 
 
+## 🧼 If you are looking to mount on specific path
 
 docker run -d \
   --name jenkins \
@@ -118,5 +119,7 @@ docker run -d \
   -v /var/run/docker.sock:/var/run/docker.sock \
   -v /Users/Abhay/Documents/Labs/jenkins_home:/var/jenkins_home \
   jenkins-docker:v1
+
+Note: make sure you run the command: "chmod -R 777 /Users/Abhay/Documents/Labs/jenkins_home" before running above command else the storage mount will give and issue.
 
 
